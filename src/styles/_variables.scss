@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+/* COMMON */
+// $color1: #1A4D2E;
+$color1: #1AA6B8;
+$color2: #4a848b;
+$color3: #3CB141;
+$color4: #01BF01;
+$color5: #F4F4F4;
+$color6: #577B8D;
+$color7: #D2FF54;
+$color1-op-50: rgba($color1, 0.5);
+$color1-op-30: rgba($color1, 0.3);
+$color2-op-50: rgba($color2, 0.5);
+$color2-op-10: rgba($color2, 0.1);
+$color2-op-5: rgba($color2, 0.05);
+$color3-op-50: rgba($color3, 0.5);
+$color5-op-30: rgba($color5, 0.3);
+$color6-op-50: rgba($color6, 0.3);
+$vendors: ("", "-webkit-", "-moz-", "-ms-", "-o-");
+
+/* BOOTSTRAP */
+$font-family-sans-serif: 'Orbitron', sans-serif;
+$primary: $color1;
+$secondary: $color4;
+$success: $color3;
+$light: $color3;
+$navbar-light-color: $color3;
+$navbar-light-hover-color: $color5;
+$navbar-light-active-color: $color5;
+$navbar-nav-link-padding-x: "1rem";
+$nav-link-font-weight: 300;

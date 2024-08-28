@@ -1,0 +1,31 @@
+@use "../../styles/variables" as v;
+@use "../../styles/mixins" as m;
+
+footer {
+  background-image: url("/images/footer5.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: bottom center;  
+  color: v.$color4;
+  padding: 4rem;
+  font-size: 1.2rem;
+  
+  .row {
+    @include m.flex($jc: space-evenly, $ai: start, $fw: none, $gap: 1rem);
+     
+
+    .footer-contact .nav {
+      @include m.flex($jc: center, $ai: start, $fd: column, $gap: 5px);
+    }
+    a {
+      color: v.$color4;
+      text-decoration: none;
+      font-weight: 500;
+      &:hover {
+        color: v.$color2;
+      }
+    }
+    
+   
+  }
+}
