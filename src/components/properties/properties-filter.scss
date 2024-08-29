@@ -1,0 +1,25 @@
+@use "../../styles/variables" as v;
+@use "../../styles/mixins" as m;
+
+.properties-filter {
+   background-color: v.$color1;
+   padding: 1rem;
+   border-radius: 20px;
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   -ms-border-radius: 20px;
+   -o-border-radius: 20px;
+
+
+   .form-label {
+      color: v.$color6;
+      font-weight: 600;
+   }
+
+   .form-control {
+      background-color: v.$color7;
+      border: none !important;
+
+   
+   }
+}
