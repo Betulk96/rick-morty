@@ -4,17 +4,17 @@ import { Carousel, Container, Image } from 'react-bootstrap';
 
 const MenuCarousel = () => {
     const styles = {
-        backgroundColor: 'black', // İç arka plan rengi
-        height: '45vh',
+        backgroundColor: 'black',
+        height: '40vh',
         display: 'flex',
         justifyContent: 'space-evenly',
         alignItems: 'end',
-        borderRadius: '50px', // Köşeleri yuvarlak yapar
-        border: '5px solid transparent', // Şeffaf bir sınır
-        backgroundImage: 'linear-gradient(black, black), linear-gradient(to right, #1AA6B8, #4a848b, #3CB141, #01BF01, #D2FF54)', // Kenarlar için degrade sınır
+        borderRadius: '50px',
+        border: '5px solid transparent',
+        backgroundImage: 'linear-gradient(black, black), linear-gradient(to right, #1AA6B8, #4a848b, #3CB141, #01BF01, #D2FF54)',
         backgroundOrigin: 'border-box',
         backgroundClip: 'content-box, border-box',
-        overflow: 'hidden', // Ensure the image does not exceed the container
+        overflow: 'hidden',
     };
 
     const imageStyles1 = {
@@ -28,7 +28,6 @@ const MenuCarousel = () => {
         width: '100%',
         height: '100%',
         objectFit: 'top cover',
-        
         borderRadius: '30px',
     };
     const imageStyles3 = {

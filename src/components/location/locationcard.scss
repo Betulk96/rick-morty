@@ -1,0 +1,43 @@
+@use "../../styles/variables" as v;
+@use "../../styles/mixins" as m;
+
+
+.resident-card {
+    position: relative;
+    cursor: pointer;
+    border: none;
+    overflow: hidden;
+}
+
+.img-container {
+    position: relative;
+}
+
+.card-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card-img:hover {
+    transform: scale(1.05);
+}
+
+.img-title{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.title {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}

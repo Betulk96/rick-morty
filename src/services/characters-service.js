@@ -3,9 +3,7 @@ const API_BASE_URL = "https://rickandmortyapi.com/api";
 
 export async function fetchData(url) {
   const response = await fetch(url);
-  if (!response.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
-  }
+ 
   return await response.json();
 }
 
@@ -52,23 +50,4 @@ export async function getEpisodeById(id) {
 }
 
 
-export async function getAllLocations(page = 1) {
-  const url = `${API_BASE_URL}/location?page=${page}`;
-  return fetchData(url);
-}
 
-
-export async function getLocationById(id) {
-  const url = `${API_BASE_URL}/location/${id}`;
-  return fetchData(url);
-}
-
-export async function getLocationsByIds(ids = []) {
-  if (!ids.length) {
-    throw new Error("At least one ID must be provided.");
-  }
-
-  const idString = ids.join(',');
-  const url = `${API_BASE_URL}/location/${idString}`;
-  return fetchData(url);
-}

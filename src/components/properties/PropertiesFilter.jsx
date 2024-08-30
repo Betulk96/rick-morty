@@ -10,8 +10,7 @@ const PropertiesFilter = ({ onSearch }) => {
         species: [],
         type: [],
         gender: [],
-        origin: [],
-        location: []
+        
     });
     const [formData, setFormData] = useState({});
 
@@ -28,8 +27,8 @@ const PropertiesFilter = ({ onSearch }) => {
 
     return (
         <Form className="properties-filter">
-            <Row className="mb-3">
-                <Col className='mt-2' md={12}>
+            <Row >
+                <Col  md={3} >
                     <Form.Group controlId="status">
                         <Form.Label>Status</Form.Label>
                         <Form.Control as="select" name="status" onChange={handleChange}>
@@ -43,7 +42,7 @@ const PropertiesFilter = ({ onSearch }) => {
                     </Form.Group>
                 </Col>
 
-                <Col className='mt-2' md={12}>
+                <Col  md={3}>
                     <Form.Group controlId="species">
                         <Form.Label>Species</Form.Label>
                         <Form.Control as="select" name="species" onChange={handleChange}>
@@ -57,7 +56,7 @@ const PropertiesFilter = ({ onSearch }) => {
                     </Form.Group>
                 </Col>
            
-                <Col className='mt-2' md={12}>
+                <Col  md={3}>
                     <Form.Group controlId="type">
                         <Form.Label>Type</Form.Label>
                         <Form.Control as="select" name="type" onChange={handleChange}>
@@ -71,7 +70,7 @@ const PropertiesFilter = ({ onSearch }) => {
                     </Form.Group>
                 </Col>
 
-                <Col className='mt-2' md={12}>
+                <Col  md={3}>
                     <Form.Group controlId="gender">
                         <Form.Label>Gender</Form.Label>
                         <Form.Control as="select" name="gender" onChange={handleChange}>
@@ -85,33 +84,9 @@ const PropertiesFilter = ({ onSearch }) => {
                     </Form.Group>
                 </Col>
             
-                <Col className='mt-2' md={12}>
-                    <Form.Group controlId="origin">
-                        <Form.Label>Origin</Form.Label>
-                        <Form.Control as="select" name="origin" onChange={handleChange}>
-                            <option value="">All</option>
-                            {filters.origin.map((origin) => (
-                                <option key={origin} value={origin.charAt(0).toLowerCase() + origin.slice(1)}>
-                                    {origin.charAt(0).toUpperCase() + origin.slice(1)}
-                                </option>
-                            ))}
-                        </Form.Control>
-                    </Form.Group>
-                </Col>
+               
 
-                <Col className='mt-2' md={12}>
-                    <Form.Group controlId="location">
-                        <Form.Label>Location</Form.Label>
-                        <Form.Control as="select" name="location" onChange={handleChange}>
-                            <option value="">All</option>
-                            {filters.location.map((location) => (
-                                <option key={location} value={location}>
-                                    {location.charAt(0).toUpperCase() + location.slice(1)}
-                                </option>
-                            ))}
-                        </Form.Control>
-                    </Form.Group>
-                </Col>
+               
             </Row>
         </Form>
     );
