@@ -1,7 +1,7 @@
 "use client"
 
 import CommonError from "@/components/errors/common-error";
-import Spacer from "@/components/spacer";
+import Spacer from "@/components/Spacer";
 import React from "react";
 
 const ErrorPage = ({ error, reset }) => {

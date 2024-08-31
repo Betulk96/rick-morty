@@ -9,7 +9,7 @@ const DocumentionPage = () => {
             <Container className="text-center my-5 " fluid >
 
                 <Row className="justify-content-md-center">
-                    <Col md={6} className='bg-primary rounded-1 p-3'> <p>
+                    <Col md={6} className='bg-secondary rounded-1 p-3'> <p>
                         This project utilizes the <strong>Rick and Morty API</strong> to fetch data about characters, locations, and episodes from the popular animated series.
                     </p>
                         <p>

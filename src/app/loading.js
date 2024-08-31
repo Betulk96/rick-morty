@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image"; // Next.js'in Image bileşeni için
 
 const Loading = () => {
   return (
@@ -11,18 +12,13 @@ const Loading = () => {
         alignItems: "center",
       }}
     >
-      
-      {/* <Image src="/images/loader.gif" width={100} height={100} /> */}
-
-      <iframe
-        src="https://giphy.com/embed/IgA2AJscUx3gTfITIY"
-        width="270"
-        height="480"
+      <Image
+        src="/portal-rick-and-morty.gif" // public klasöründeki GIF dosyasının yolu
+        alt="Loading animation"
+        width={270} // GIF'in genişliği
+        height={480} // GIF'in yüksekliği
         style={{ border: "none" }}
-        frameBorder="0"
-        allowFullScreen
-        title="loading-animation"
-      ></iframe>
+      />
     </div>
   );
 };

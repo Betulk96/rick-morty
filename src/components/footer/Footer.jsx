@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Image, Row } from "react-bootstrap";
 import Link from "next/link";
 import { FaImdb, FaWikipediaW, FaGlobe, FaRegCopyright } from "react-icons/fa";
 import { TbBrandNetflix } from "react-icons/tb";
@@ -55,7 +55,7 @@ const Footer = () => {
           </Col>
           <Col xs={12} md={12} xl={4} className="footer-logo">
             <Link href="https://rickandmortyapi.com/" target="_blank" rel="noopener noreferrer">
-              <img src="/images/api2.png" alt="Rick&Morty Logo" width={20} height={20} />
+              <Image src="/images/api2.png" alt="Rick&Morty Logo" width={20} height={20} />
               &nbsp;Rick&Morty API
             </Link>
             <p> <FaRegCopyright /> 2024&nbsp;

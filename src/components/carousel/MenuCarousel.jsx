@@ -45,21 +45,21 @@ const MenuCarousel = () => {
         <Container style={styles}>
             <Carousel indicators={false} controls={true} interval={5000} style={{ width: '100%', height: '100%' }}>
                 <Carousel.Item>
-                    <img
+                    <Image
                         src="/images/table.jpg"
                         style={imageStyles1}
                         alt="First slide"
                     />
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img
+                    <Image
                         src="/images/carousel4.jpeg"
                         style={imageStyles2}
                         alt="Second slide"
                     />
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img
+                    <Image
                         src="/images/carousel3.jpg"
                         style={imageStyles3}
                         alt="Third slide"

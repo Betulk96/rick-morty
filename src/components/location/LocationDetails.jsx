@@ -1,6 +1,6 @@
 "use client"
 import React, { useEffect, useState } from 'react';
-import { Card, Container, Row, Col } from 'react-bootstrap';
+import { Card, Container, Row, Col, Image } from 'react-bootstrap';
 import Loading from '@/app/loading';
 import Spacer from '@/components/Spacer';
 import { getCharacterById } from '@/services/characters-service';
@@ -68,7 +68,7 @@ const LocationDetails = ({ property }) => {
             <Row>
               <Col md={3}>
                 <div className="d-flex justify-content-center align-self-center ">
-                  <img src="https://icons.iconarchive.com/icons/goodstuff-no-nonsense/free-space/128/venus-icon.png" width="128" height="128"></img>
+                  <Image src="https://icons.iconarchive.com/icons/goodstuff-no-nonsense/free-space/128/venus-icon.png" width="128" height="128" alt="Venus"></Image>
                 </div>
               </Col>
               <Col className="ps-5 align-self-center" md={9}>

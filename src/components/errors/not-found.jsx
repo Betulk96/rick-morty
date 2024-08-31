@@ -14,6 +14,7 @@ const NotFound = () => {
 			width={0}
 			height={0}
 			className="not-found-image"
+			alt="not found"
 			
 		/>
 
