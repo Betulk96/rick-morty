@@ -1,0 +1,9 @@
+@use "../../styles/variables" as v;
+
+@media screen and (max-width: 1200px) {
+
+    .container {
+        height: auto!important;
+    }
+    
+}

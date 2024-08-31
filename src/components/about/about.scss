@@ -1,0 +1,48 @@
+@use "../../styles/variables" as v;
+
+.about-page {
+
+    color: v.$color5;
+
+
+
+    .section1 {
+        background-color: v.$color2;
+        padding: 0px;
+        margin: 0px;
+        border-radius: 30px;
+        font-size: larger;
+
+        .about-image {
+            background-color: v.$color5;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+        }
+    }
+
+    .main-image {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 20%;
+
+    }
+
+    h2{       
+        color: v.$color7;
+        
+    }
+    p, ul,.description {
+        padding: 10px;
+        background-color: v.$color2;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+}
+
+}

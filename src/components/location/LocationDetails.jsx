@@ -7,6 +7,7 @@ import { getCharacterById } from '@/services/characters-service';
 import CustomPagination from '@/helpers/pagination';
 import { useRouter } from 'next/navigation';
 import "./locationcard.scss";
+import PageHeader from '../PageHeader';
 
 
 const LocationDetails = ({ property }) => {
@@ -59,6 +60,7 @@ const LocationDetails = ({ property }) => {
 
   return (
     <Container>
+      <PageHeader>{property.name} Details</PageHeader>
       <Spacer height={30} />
       <Row className="justify-content-center mt-4">
         <Col md={8} className=''>

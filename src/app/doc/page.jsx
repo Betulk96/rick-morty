@@ -1,11 +1,15 @@
-import React from 'react'
+import DocumentionPage from '@/components/doc/DocumentionPage';
+import PageHeader from '@/components/PageHeader';
+import React from 'react';
+import { Container, Button, Row } from 'react-bootstrap';
 
 const Documention = () => {
   return (
-    <div>
-      Documetion
-    </div>
-  )
-}
+    <>
+     <DocumentionPage />
+    </>
 
-export default Documention
+  );
+};
+
+export default Documention;

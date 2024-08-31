@@ -13,16 +13,16 @@ $color1-op-50: rgba($color1, 0.5);
 $color1-op-30: rgba($color1, 0.3);
 $color4-op-50: rgba($color4, 0.5);
 $color4-op-10: rgba($color4, 0.1);
-$color4-op-5: rgba($color4, 0.05);
+$color4-op-50: rgba($color4, 0.05);
 $color3-op-50: rgba($color3, 0.5);
-$color5-op-30: rgba($color5, 0.3);
+$color6-op-30: rgba($color6, 0.3);
 $color6-op-50: rgba($color6, 0.3);
 $vendors: ("", "-webkit-", "-moz-", "-ms-", "-o-");
 
 /* BOOTSTRAP */
 $font-family-sans-serif: 'Orbitron', sans-serif;
-$primary: $color1;
-$secondary: $color4;
+$primary: $color5;
+$secondary: $color7;
 $success: $color3;
 $light: $color3;
 $navbar-light-color: $color3;

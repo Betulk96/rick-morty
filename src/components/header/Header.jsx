@@ -13,13 +13,14 @@ const Header = () => {
                         <Image
                             src="/images/rmgreen.png"
                             alt="logo"
-                            width={220}
+                            width={130}
                             height={130}
+                            className='ms-3 logo'
                         />
                     </NavbarBrand>
                 </Col>
                 <Col xs="auto">
-                    <Nav className="d-flex">
+                    <Nav className="d-flex nav-items">
                         <Nav.Item>
                             <Nav.Link href="/about">
                                 <div className="d-flex align-items-center">

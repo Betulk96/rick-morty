@@ -1,11 +1,12 @@
 "use client";
 import React from 'react';
 import { Carousel, Container, Image } from 'react-bootstrap';
+import "./menu-carousel.scss"
 
 const MenuCarousel = () => {
     const styles = {
         backgroundColor: 'black',
-        height: '40vh',
+        height: '400px',
         display: 'flex',
         justifyContent: 'space-evenly',
         alignItems: 'end',
@@ -15,6 +16,7 @@ const MenuCarousel = () => {
         backgroundOrigin: 'border-box',
         backgroundClip: 'content-box, border-box',
         overflow: 'hidden',
+        marginBottom: '0px',
     };
 
     const imageStyles1 = {
@@ -41,7 +43,7 @@ const MenuCarousel = () => {
 
     return (
         <Container style={styles}>
-            <Carousel indicators={false} controls={true} interval={100000} style={{ width: '100%', height: '100%' }}>
+            <Carousel indicators={false} controls={true} interval={5000} style={{ width: '100%', height: '100%' }}>
                 <Carousel.Item>
                     <img
                         src="/images/table.jpg"

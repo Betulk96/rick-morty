@@ -4,6 +4,7 @@ import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { FaSkull, FaQuestionCircle, FaCheckCircle } from 'react-icons/fa';
 import "./card.scss";
+import PageHeader from '../PageHeader';
 
 const PropertiesCards = ({ properties }) => {
   const router = useRouter();
@@ -36,6 +37,7 @@ const PropertiesCards = ({ properties }) => {
 
   return (
     <Container>
+     
       <Row>
         {properties.map((character) => (
           <Col key={character.id} sm={12} md={4} lg={3} className="mb-4">

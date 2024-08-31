@@ -1,10 +1,11 @@
+import SupportPage from '@/components/support/SupportPage'
 import React from 'react'
 
 const Support = () => {
   return (
-    <div>
-      Support
-    </div>
+    <>
+    <SupportPage />   
+    </>
   )
 }
 
