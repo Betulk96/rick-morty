@@ -13,7 +13,7 @@
     position: relative;
 }
 
-.card-img {
+.card-img-top {
     display: block;
     width: 100%;
     height: auto;
@@ -21,7 +21,7 @@
     transition: transform 0.3s ease;
 }
 
-.card-img:hover {
+.card-img-top:hover {
     transform: scale(1.05);
 }
 

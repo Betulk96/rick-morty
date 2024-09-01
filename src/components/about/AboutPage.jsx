@@ -8,13 +8,13 @@ const AboutPage = () => {
         <>
             <PageHeader>About Rick&amp;Morty</PageHeader>
             <Container className="about-page">
-                <Row className="section1 align-items-center ">
+                <Row className="section1 align-items-center  ">
                     <Col className='ps-0' md={4}>
                         <Image src="/images/about1.jpg" className="about-image" alt="about" width={"100%"} height={"100%"} />
                     </Col>
-                    <Col md={8}>
-                        <h1>About Rick and Morty</h1>
-                        <p>
+                    <Col md={8} className=''>
+                        <h1 >About Rick and Morty</h1>
+                        <p >
                             <strong>Rick and Morty</strong> is an American animated science fiction sitcom created by Justin Roiland and Dan Harmon. The show first premiered on December 2, 2013, on Adult Swim, and quickly gained a massive following due to its unique blend of dark humor, science fiction, and philosophical themes.
                         </p>
                     </Col>

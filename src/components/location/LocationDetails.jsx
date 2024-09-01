@@ -68,7 +68,7 @@ const LocationDetails = ({ property }) => {
             <Row>
               <Col md={3}>
                 <div className="d-flex justify-content-center align-self-center ">
-                  <Image src="https://icons.iconarchive.com/icons/goodstuff-no-nonsense/free-space/128/venus-icon.png" width="128" height="128" alt="Venus"></Image>
+                  <Image src="https://icons.iconarchive.com/icons/goodstuff-no-nonsense/free-space/128/venus-icon.png" width="128" height="128" alt="Venus" ></Image>
                 </div>
               </Col>
               <Col className="ps-5 align-self-center" md={9}>

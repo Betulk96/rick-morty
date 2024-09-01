@@ -6,6 +6,7 @@ import "./propertiesdetail-card.scss"
 import SameCharacter from './SameCharacter';
 import Spacer from '../Spacer';
 import PageHeader from '../PageHeader';
+import { FaCheckCircle, FaQuestionCircle, FaSkull } from 'react-icons/fa';
 
 const PropertyDetails = ({ property }) => {
   const router = useRouter();
@@ -15,6 +16,7 @@ const PropertyDetails = ({ property }) => {
   }
 
   const handleLocationClick = () => {
+    
     const locationUrlParts = property.location.url.split('/');
     const locationId = locationUrlParts[locationUrlParts.length - 1];
     const locationName = property.location.name;
@@ -22,24 +24,42 @@ const PropertyDetails = ({ property }) => {
     router.push(`/location/${locationId}/${locationName}`);
   };
 
+  
+  const handleFieldClick = (field, value) => {
+    router.push(`/?${field}=${encodeURIComponent(value)}`);
+  };
+
+  const renderStatusIcon = (status) => {
+    switch (status) {
+      case 'Alive':
+        return <FaCheckCircle className="status-icon alive " />;
+      case 'Dead':
+        return <FaSkull className="status-icon dead" />;
+      default:
+        return <FaQuestionCircle className="status-icon unknown" />;
+    }
+  };
+
   return (
     <Container>
-       <PageHeader>Characters Details</PageHeader>
+      <PageHeader>Characters Details</PageHeader>
       <Row className="justify-content-center mt-4">
-        <Col md={8}>
-          <Card>
-            <Row className="justify-content-center">
-              <Col md={4} className="image-container">
-                <Card.Img variant="left" src={property.image} alt={property.name} />
+        <Col xs={12} md={10}>
+          <Card className="characters-card">
+            <Row >
+              <Col xs={12} md={4} className="image-container">
+                <Card.Img src={property.image} alt={property.name} className="property-image" />
               </Col>
-              <Col className="ps-5 align-self-center" md={8}>
+              <Col className="ps-5 align-self-center " xs={12} md={8}>
                 <Card.Body>
                   <Card.Title>{property.name}</Card.Title>
                   <Card.Text>
-                    <strong>Status:</strong> {property.status} <br />
-                    <strong>Species:</strong> {property.species} <br />
-                    <strong>Type:</strong> {property.type || 'Unknown'} <br />
-                    <strong>Gender:</strong> {property.gender} <br />
+                    <strong>Status:</strong>  <span className={`clickable status ${property.status.toLowerCase()}`} onClick={() => handleFieldClick('status',property.status)}>
+                    &nbsp;{property.status} {renderStatusIcon(property.status)}
+                  </span> <br />
+                    <strong>Species:</strong> <span className="clickable" onClick={() => handleFieldClick('species', property.species)}>{property.species}</span>  <br />
+                    <strong>Type:</strong> <span className="clickable" onClick={() => handleFieldClick('type', property.type || 'Unknown')}>{property.type || 'Unknown'}</span>  <br />
+                    <strong>Gender:</strong> <span className="clickable" onClick={() => handleFieldClick('gender', property.gender)}>{property.gender}</span> <br />
                     <strong>Origin:</strong> {property.origin.name}<br />
                     <strong>Location:</strong> <a className="clickable-link" onClick={handleLocationClick}>{property.location.name}</a> <br />
                     <strong>Episodes:</strong> {property.episode.length} episodes
@@ -53,10 +73,10 @@ const PropertyDetails = ({ property }) => {
           </Card>
         </Col>
       </Row>
-      <Spacer  />
+      <Spacer />
 
       <SameCharacter property={property} />
-      <Spacer  />
+      <Spacer />
     </Container>
   );
 };

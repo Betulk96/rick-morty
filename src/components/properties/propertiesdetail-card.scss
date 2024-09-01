@@ -11,14 +11,70 @@
   }
 
 
-  .card-img {
-    display: block;
+  .property-image {
     width: 100%;
     height: auto;
     object-fit: cover;
     object-position: center;
+
+    &:hover {
+      all: unset !important;
+    }
+  }
+
+
+}
+
+.characters-card {
+
+
+  .clickable {
+    color: v.$color1;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s ease, font-weight 0.3s ease, font-size 0.3s ease;
+
+    &:hover {
+      color: v.$color6;
+      font-weight: bold;
+      font-size: larger;
+    }
+  }
+
+  .status {
+
+
+    &.alive {
+      color: green;
+    }
+
+    &.dead {
+      color: red;
+    }
+
+    &.unknown {
+      color: gray;
+    }
+
+    .status-icon {
+      margin-left: 8px;
+      padding-top: 0;
+    }
   }
 }
+
+@media screen and (max-width: 992px) {
+  .property-image {
+    height: 250px;
+    width: auto;
+  }
+}
+
 @media screen and (max-width: 768px) {
-  
+  .property-image {
+    width: 100%;
+    height: auto;
+  }
+
 }
