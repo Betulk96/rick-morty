@@ -49,5 +49,10 @@ export async function getEpisodeById(id) {
   return fetchData(url);
 }
 
+export async function getByName(name) {
+  const url = `${API_BASE_URL}/character/?name=${name}`;
+  return fetchData(url);
+}
+
 
 

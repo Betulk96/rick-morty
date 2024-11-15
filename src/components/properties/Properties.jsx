@@ -7,6 +7,7 @@ import { filterCharacters } from '@/services/characters-service';
 import { useRouter, useSearchParams } from 'next/navigation';
 import CustomPagination from '@/helpers/pagination';
 import { swAlert, swError } from '@/helpers/swal';
+import Search from './Search';
 
 const Properties = () => {
     const router = useRouter();
@@ -29,9 +30,10 @@ const Properties = () => {
             species,
             type,
             gender,
-
             page,
         };
+
+       
 
         // console.log("paramsObj", paramsObj);
         setLoading(true);
@@ -58,6 +60,12 @@ const Properties = () => {
             setLoading(false);
         }
     }, [searchParams]);
+
+    const handleSearchResults = (results) => {
+        setPropertyList(results);
+        setTotalPages(1); 
+        setCurrentPage(1);
+      };
 
     useEffect(() => {
         const params = new URLSearchParams(searchParams.toString());
@@ -102,6 +110,7 @@ const Properties = () => {
         <Container>
             <Row>
                 <Col lg={12} className="mt-3">
+                    <Search onSearchResults={handleSearchResults} />
                     <PropertiesFilter onSearch={handleSearch} />
                 </Col>
                 <Col lg={12} className="mt-3">
